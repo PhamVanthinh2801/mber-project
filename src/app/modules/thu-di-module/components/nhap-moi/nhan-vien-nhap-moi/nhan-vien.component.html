@@ -5,10 +5,7 @@
   </button>
 </div>
 <p-fieldset legend="Nhân viên" [style]="{overflow: 'auto', height:'87vh'}">
-  <div class="content">
-    <label class="header">
-      Thông tin người nhập
-    </label>
+  <p-fieldset legend="Thông tin người nhập">
     <div class="form-body">
       <div class="grid">
         <div class="col-4 grid">
@@ -46,11 +43,8 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="content">
-    <label class="header">
-      Thông tin thư đi
-    </label>
+  </p-fieldset>
+  <p-fieldset legend="Thông tin thư đi">
     <div class="form-body">
       <div class="grid">
         <div class="col-4 grid">
@@ -102,7 +96,7 @@
           <div class="col-8">
             <p-calendar [(ngModel)]="sendDate"
                         styleClass="w-full"
-                        [monthNavigator]="true" R
+                        [monthNavigator]="true"
                         [yearNavigator]="true"
                         yearRange="2000:2030"
                         appendTo="body"
@@ -233,7 +227,8 @@
         </div>
         <div class="col-4 grid">
           <div class="col-4"><label>Tình trạng</label></div>
-          <div class="col-8"><input [disabled]="true" [(ngModel)]="checkStatus.name" class="w-full" placeholder="Đang soạn"
+          <div class="col-8"><input [disabled]="true" [(ngModel)]="checkStatus.name" class="w-full"
+                                    placeholder="Đang soạn"
                                     pInputText type="text"></div>
         </div>
       </div>
@@ -253,8 +248,9 @@
                 (click)="addLetterFromNoneHead()"></button>
         <button class="tool" (click)="onEventClose()" icon="pi pi-times" pButton type="button" label="Đóng"></button>
       </div>
+
     </div>
-  </div>
+  </p-fieldset>
 </p-fieldset>
 <p-dialog header="Thư mẫu" [(visible)]="showThuMau" [style]="{width:'90vw', height:'90vh'}">
   <div class="grid">
@@ -271,15 +267,15 @@
       <div class="col-4 grid">
         <div class="col-4"><label>Cơ quan</label></div>
         <div class="col-8">
-          <p-dropdown  placeholder="---Vui lòng chọn---"
-                     optionLabel="name"></p-dropdown>
+          <p-dropdown placeholder="---Vui lòng chọn---"
+                      optionLabel="name"></p-dropdown>
         </div>
       </div>
       <div class="col-4 grid">
         <div class="col-4"><label>Năm</label></div>
         <div class="col-8">
-          <p-dropdown  [showClear]="true" placeholder="---Vui lòng chọn---"
-                       optionLabel="name"></p-dropdown>
+          <p-dropdown [showClear]="true" placeholder="---Vui lòng chọn---"
+                      optionLabel="name"></p-dropdown>
         </div>
       </div>
       <div class="col-4 grid">

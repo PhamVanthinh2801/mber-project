@@ -11,9 +11,11 @@ import {MessageService} from "primeng/api";
   providers: [MessageService]
 })
 export class ThuDangSoanComponent extends iComponentBase implements OnInit {
+
   isVanThu = false;
   checkNhanVien: any;
   checkVanThu: any;
+
   constructor(public title: Title,
     public msg: MessageService) {
     super(msg, title);

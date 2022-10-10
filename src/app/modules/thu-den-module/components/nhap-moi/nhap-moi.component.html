@@ -1,1 +1,12 @@
-<h1>This is nhạp mơi</h1>
+<div *ngIf="isVanthu == false">
+  <p-fieldset legend="Nhân viên" [style]="{overflow: 'auto', height:'87vh'}">
+    <app-nhan-vien-nhap-moi></app-nhan-vien-nhap-moi>
+  </p-fieldset>
+</div>
+
+<div *ngIf="isVanthu == true">
+  <p-fieldset legend="Văn Thư" [style]="{overflow: 'auto', height:'87vh'}">
+    <app-van-thu-nhap-moi></app-van-thu-nhap-moi>
+  </p-fieldset>
+</div>
+

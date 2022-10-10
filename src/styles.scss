@@ -18,6 +18,11 @@ body{
   display:flex;
   justify-content:end;
 }
+.fix-but {
+  position: fixed;
+  top: 50px;
+  z-index: 9;
+}
 .form-body {
   width:90vw;
   margin:auto;
@@ -30,6 +35,10 @@ div > label {
 }
 
 input {
+  width:100%;
+}
+
+p-calendar {
   width:100%;
 }
 

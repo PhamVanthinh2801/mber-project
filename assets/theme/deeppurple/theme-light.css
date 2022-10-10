@@ -6864,6 +6864,12 @@ p-autocomplete.ng-dirty.ng-invalid .p-autocomplete .p-autocomplete-multiple-cont
   background-color: rgba(211, 47, 47, 0.16);
 }
 
+.p-calendar {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+}
+
 .p-calendar-w-btn {
   border: 1px solid rgba(0, 0, 0, 0.38);
   background: #ffffff;

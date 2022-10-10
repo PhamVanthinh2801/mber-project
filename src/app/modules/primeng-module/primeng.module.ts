@@ -5,9 +5,9 @@ import {ButtonModule} from 'primeng/button';
 import {FormsModule} from "@angular/forms";
 import {MessagesModule} from "primeng/messages";
 import {ToastModule} from "primeng/toast";
-import {iComponentBase} from "./functions/iServiceBase";
+import {iComponentBase} from "../base-module/functions/iServiceBase";
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
-import { LoadingComponent } from './loading/loading.component';
+import { LoadingComponent } from '../base-module/loading/loading.component';
 import {ProgressBarModule} from 'primeng/progressbar';
 import {BlockUIModule} from 'primeng/blockui';
 import {MenubarModule} from 'primeng/menubar';
@@ -24,6 +24,7 @@ import {DialogModule} from 'primeng/dialog';
 import {TreeSelectModule} from 'primeng/treeselect';
 import {AutoCompleteModule} from "primeng/autocomplete";
 import {InputNumberModule} from 'primeng/inputnumber';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import {InputNumberModule} from 'primeng/inputnumber';
     DialogModule,
     TreeSelectModule,
     AutoCompleteModule,
-    InputNumberModule
+    InputNumberModule,
+    InputTextareaModule
   ],
   exports: [
     MenubarModule,
@@ -80,8 +82,9 @@ import {InputNumberModule} from 'primeng/inputnumber';
     DialogModule,
     TreeSelectModule,
     AutoCompleteModule,
-    InputNumberModule
+    InputNumberModule,
+    InputTextareaModule
   ],
 
 })
-export class PrimengmoduleModule { }
+export class PrimeNgModule { }

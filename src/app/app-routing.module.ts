@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'danh-muc',
     loadChildren: () => import('./modules/danh-muc-module/danh-muc.module').then(m => m.DanhMucModule),
+  },
+  {
+    path: 'bao-cao',
+    loadChildren: () => import('./modules/bao-cao-module/bao-cao-module').then(m => m.BaoCaoModule),
   }
 ];
 

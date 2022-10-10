@@ -1,6 +1,11 @@
 export interface NhanVienModel {
   employeeId?: number,
-  organization?: object,
+  organization?: {
+    name?: string;
+    orgParent?: {
+      name?: string;
+    }
+  },
   employeeCode?: string,
   positionName?: string,
   fullName?: string,

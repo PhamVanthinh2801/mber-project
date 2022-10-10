@@ -12,7 +12,8 @@ export class TopMenuComponent implements OnInit {
   imagePath = 'assets/layout/images/logo.png'
   submenu = {
     thuDen: '/thu-den',
-    thuDi: '/thu-di'
+    thuDi: '/thu-di',
+    baoCao: '/bao-cao'
   }
   items = [
     {
@@ -34,9 +35,44 @@ export class TopMenuComponent implements OnInit {
       name: 'Thư đang soạn'
     },
     {
+      link: this.submenu.thuDi + '/thu-tra-lai',
+      name: 'Thư trả lại'
+    },
+    {
       link: this.submenu.thuDi + '/thu-cho-xu-ly',
       name: 'Thư chờ xử lý'
+    },
+    {
+      link: this.submenu.thuDi + '/thu-da-gui',
+      name: 'Thư đã gửi'
+    },
+    {
+      link: this.submenu.thuDi + '/tat-ca-thu-di',
+      name: 'Tất cả'
+    },
+    {
+      link: this.submenu.thuDi + '/import-thu-di',
+      name: 'Import thư đi'
     }
+  ]
+
+  listMenuBaoCao = [
+    {
+      link: this.submenu.baoCao + '/bao-cao-so-thu-di',
+      name: 'Báo cáo số thư đi'
+    },
+    {
+      link: this.submenu.baoCao + '/bao-cao-so-thu-den',
+      name: 'Báo cáo số thư đến'
+    },
+    {
+      link: this.submenu.baoCao + '/bao-cao-theo-chi-phi',
+      name: 'Báo cáo theo chi phí'
+    },
+    {
+      link: this.submenu.baoCao + '/bao-cao-tong-hop-thu',
+      name: 'Báo cáo tổng hợp thư'
+    },
   ]
   isLogin = false;
   user: any;

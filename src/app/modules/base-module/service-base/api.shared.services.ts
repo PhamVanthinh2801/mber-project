@@ -7,6 +7,10 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class SharedApi extends apiServiceBase {
+  // get thư đi theo trạng thái
+  getThuDiTheoTrangThai(statusLetter: any){
+    return this.postData(API.PHAN_HE.THU_DI, API.API_THU_DI.GET_THU_DI_THEO_LOAI, statusLetter);
+  }
   // update trạng thái thư
   public updateLetter(id: number, sParam: any): Observable<any> {
     return this.updateData(API.PHAN_HE.THU_DI, API.API_THU_DI.UPDATE_THU_DI+'/'+id, sParam);
