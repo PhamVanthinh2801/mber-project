@@ -4,11 +4,11 @@ import { NhapMoiComponent } from './components/nhap-moi/nhap-moi.component';
 import {RouterModule, Routes} from "@angular/router";
 import { ThuMoiComponent } from './components/thu-moi/thu-moi.component';
 import {HttpClientModule} from "@angular/common/http";
-import { NhanVienThuMoiComponent } from './components/thu-moi/nhan-vien-thu-moi/nhan-vien-thu-moi.component';
-import { VanThuThuMoiComponent } from './components/thu-moi/van-thu-thu-moi/van-thu-thu-moi.component';
 import {PrimeNgModule} from "../primeng-module/primeng.module";
-import { NhanVienNhapMoiComponent } from './components/nhap-moi/nhan-vien-nhap-moi/nhan-vien-nhap-moi.component';
-import { VanThuNhapMoiComponent } from './components/nhap-moi/van-thu-nhap-moi/van-thu-nhap-moi.component';
+import {FormsModule} from "@angular/forms";
+import {AutocompleteLibModule} from "angular-ng-autocomplete";
+import {BaseModule} from "../base-module/base.module";
+import {MessageService} from "primeng/api";
 
 const routes: Routes = [
   {path: 'nhap-moi', component: NhapMoiComponent},
@@ -19,19 +19,17 @@ const routes: Routes = [
   declarations: [
     NhapMoiComponent,
     ThuMoiComponent,
-    NhanVienThuMoiComponent,
-    VanThuThuMoiComponent,
-    NhanVienNhapMoiComponent,
-    VanThuNhapMoiComponent
   ],
   imports: [
-    CommonModule,
-    HttpClientModule,
+    FormsModule,
+    AutocompleteLibModule,
     PrimeNgModule,
     RouterModule.forChild(routes),
+    BaseModule,
   ],
   exports: [],
   providers: [
+    MessageService,
     { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: []
