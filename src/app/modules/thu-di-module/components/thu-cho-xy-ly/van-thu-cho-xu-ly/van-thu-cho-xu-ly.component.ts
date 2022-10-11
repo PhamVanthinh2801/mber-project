@@ -1,19 +1,20 @@
 import {Component, OnInit} from '@angular/core';
 import {VanThuChoXuLyService} from "./van-thu-cho-xu-ly.service";
-import {StatusLetter} from "../../../../base-module/enum/trang-thai-thu/statusLetter.enum";
-import {ThuDiModel} from "../../../../base-module/models/thu-di/thu-di.model";
+import {StatusLetterFrom} from "../../../../base-module/enum/trang-thai-thu/statusLetter.enum";
 import {SharedApi} from "../../../../base-module/service-base/api.shared.services";
-import {DonViModel} from "../../../../base-module/models/don-vi/don-vi-gui.model";
 import {LocalStorageService} from "../../../../system-module/functions/store/local-storage.service";
 import {iComponentBase, mType} from "../../../../base-module/functions/iServiceBase";
 import {Title} from "@angular/platform-browser";
 import {MessageService} from "primeng/api";
-import {SoThuDiModel} from "../../../../base-module/models/so-thu-di/so-thu-di.model";
-import {DonViChuyenPhatModel} from "../../../../base-module/models/don-vi-chuyen-phat/don-vi-chuyen-phat.model";
-import {NhanVienModel} from "../../../../base-module/models/nhan-vien/nhan-vien.model";
-import {DoMatModel} from "../../../../base-module/models/do-mat/do-mat.model";
-import {DoKhanModel} from "../../../../base-module/models/do-khan/do-khan.model";
-import {NoiNhanModel} from "../../../../base-module/models/noi-nhan/noi-nhan.model";
+import {
+  DoKhanModel, DoMatModel,
+  DonViChuyenPhatModel,
+  DonViModel, NhanVienModel,
+  NoiNhanModel,
+  SoThuModel,
+  ThuDiModel
+} from "../../../../base-module/models";
+
 
 @Component({
   selector: 'app-van-thu-cho-xu-ly',
@@ -22,8 +23,8 @@ import {NoiNhanModel} from "../../../../base-module/models/noi-nhan/noi-nhan.mod
 })
 export class VanThuChoXuLyComponent extends iComponentBase implements OnInit {
   user: any;
-  listSoThuDi: SoThuDiModel[];
-  selectedSoThuDi: SoThuDiModel;
+  listSoThuDi: SoThuModel[];
+  selectedSoThuDi: SoThuModel;
   listStatusLetter: any;
   checkStatusLetter: any;
   thuDi: ThuDiModel;
@@ -82,27 +83,27 @@ export class VanThuChoXuLyComponent extends iComponentBase implements OnInit {
     this.listTypeLetters = [{name: 'Nội bộ', key: '1'}, {name: 'Bên ngoài', key: '2'}];  // selection loại thư bên trong và bên ngoài
     this.listStatusLetter = [
       {
-        status: StatusLetter.NEW,
+        status: StatusLetterFrom.NEW,
         code: 'new',
         name: 'Mới'
       },
       {
-        status: StatusLetter.WRITING,
+        status: StatusLetterFrom.WRITING,
         code: 'write',
         name: 'Đang soạn'
       },
       {
-        status: StatusLetter.RETURN,
+        status: StatusLetterFrom.RETURN,
         code: 'return',
         name: 'Trả lại'
       },
       {
-        status: StatusLetter.PENDING,
+        status: StatusLetterFrom.PENDING,
         code: 'penđing',
         name: 'Chờ xử lý'
       },
       {
-        status: StatusLetter.SENT,
+        status: StatusLetterFrom.SENT,
         code: 'sent',
         name: 'Đã gửi'
       },

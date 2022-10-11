@@ -326,9 +326,9 @@ export class VanThuComponent extends iComponentBase implements OnInit {
           this.nhapMoiService.createLetter(param).subscribe();
           this.resetInputParams(typeLetterFrom.NoiBoCoDauMoi);
           this.showMessage(mType.success, 'Thông báo', 'Gửi đi thành công');
-          // setTimeout(() => {
-          //   window.location.reload();
-          // }, 500)
+          setTimeout(() => {
+            window.location.reload();
+          }, 500)
         }
       }
     } catch (e) {

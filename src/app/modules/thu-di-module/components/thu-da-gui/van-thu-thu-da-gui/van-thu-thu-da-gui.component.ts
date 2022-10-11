@@ -3,7 +3,8 @@ import {iComponentBase} from "../../../../base-module/functions/iServiceBase";
 import {Title} from "@angular/platform-browser";
 import {MessageService} from "primeng/api";
 import {SharedApi} from "../../../../base-module/service-base/api.shared.services";
-import {DonViModel} from "../../../../base-module/models/don-vi/don-vi-gui.model";
+import {DonViModel} from "../../../../base-module/models";
+
 
 @Component({
   selector: 'app-van-thu-thu-da-gui',
