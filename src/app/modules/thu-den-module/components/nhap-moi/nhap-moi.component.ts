@@ -23,9 +23,11 @@ import {
   styleUrls: ['./nhap-moi.component.scss']
 })
 export class NhapMoiComponent extends iComponentBase implements OnInit {
+
   first = 1;
   listStatusLetter: any;
   selectedStatus: any;
+
   isVanthu = false;
   checkNhanVien: any;
   thuDen: ThuDenModel;
@@ -77,6 +79,7 @@ export class NhapMoiComponent extends iComponentBase implements OnInit {
     } else {
       this.isVanthu = true
     }
+
     this.listStatusLetter = [
       {
         status: StatusLetterTo.NEW,
