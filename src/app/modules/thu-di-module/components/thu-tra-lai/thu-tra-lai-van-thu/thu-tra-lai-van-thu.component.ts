@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {iComponentBase} from "../../../../base-module/functions/iServiceBase";
-import {DonViModel} from "../../../../base-module/models/don-vi/don-vi-gui.model";
 import {Title} from "@angular/platform-browser";
 import {SharedApi} from "../../../../base-module/service-base/api.shared.services";
 import {MessageService} from "primeng/api";
+import {DonViModel} from "../../../../base-module/models";
 
 @Component({
   selector: 'app-thu-tra-lai-van-thu',

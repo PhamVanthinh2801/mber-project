@@ -5,6 +5,8 @@ export interface NhanVienModel {
     orgParent?: {
       name?: string;
     }
+
+    sysOrganizationId?: number,
   },
   employeeCode?: string,
   positionName?: string,

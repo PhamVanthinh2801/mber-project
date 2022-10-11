@@ -39,6 +39,7 @@ export class API_DON_VI {
 // API THƯ ĐẾN
 export class API_THU_DEN {
   public static GET_ALL_THU_MOI = 'get-all'
+  public static CREATE_THU_MOI = 'create'
 }
 
 export class API_THU_DI {

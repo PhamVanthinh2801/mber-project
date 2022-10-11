@@ -1,4 +1,4 @@
-interface NguoiGuiModel {
+export interface NguoiGuiModel {
   employeeId: number,
   organizationId: number,
   organization: object,
